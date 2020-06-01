@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)='handleClick()'>Toggle</button>
+            <p *ngIf="!toggled; else hideText">If condition displaying</p>
+            <ng-template #hideText>
+                <p>Else condition displaying</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
