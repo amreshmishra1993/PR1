@@ -12,12 +12,13 @@ export class UsersComponent implements OnInit {
     new Users("Krishna",23),
     new Users("Radha",21),
   ]
+  toggled=false;
+  constructor() {}
 
-  constructor() { 
-    console.log(this.users)
+  ngOnInit(): void {}
+
+  handleClick(){
+    this.toggled = !this.toggled
   }
-
-  ngOnInit(): void {
-  }
-
+  
 }

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-top: 20px;">
         <div class="col-md-12">
             <table class="table table-bordered" >
                 <thead>
@@ -9,7 +9,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let user of users;let i = index">
+                  <tr *ngFor="let user of users">
                     <td>{{user.name}}</td>
                     <td>{{user.age}}</td>
                   </tr>
@@ -17,4 +17,13 @@
               </table>
         </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+          <button class="btn btn-primary" (click)='handleClick()'>Toggle</button>
+          <p *ngIf="!toggled; else hideText">If condition displaying</p>
+          <ng-template #hideText>
+              <p>Else condition displaying</p>
+          </ng-template>
+      </div>
+  </div>
 </div>
